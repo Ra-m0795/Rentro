@@ -1,13 +1,13 @@
-name: Ramachandra moharana
+name : Schedule Job
 
-on: 
-   push:
-     branches: [ main ]
+on:
+   schedule:
+     cron: "0 0 * * *"
 
 jobs:
-  demo:
-    runs-on: ubuntu-latest
+  run-script:
+     runs-on: ubuntu-latest
 
-    steps:
-      - name: Greetings
-        run: echo "Hello from Ram"
+     steps:
+      - name: Print Message
+        run: echo "schedule workflow execute"         
